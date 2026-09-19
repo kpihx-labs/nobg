@@ -7,7 +7,7 @@ Three hardware profiles: **CPU**, **Intel Arc (XPU)**, **NVIDIA CUDA**.
 ## Install from Source
 
 ```bash
-cd ~/KpihX-Labs/AI/nobg
+cd ~/Labs/KpihX-Labs/AI/nobg
 ```
 
 ### Editable

@@ -1,6 +1,6 @@
 [project]
 name        = "k-nobg"
-version     = "0.1.0"
+version     = "0.1.1"
 description = "KπX sovereign background removal — FeyNobg semantic matting (CPU / Intel Arc / NVIDIA CUDA)"
 authors     = [{ name = "KpihX", email = "kapoivha@gmail.com" }]
 readme      = "README.md"
@@ -96,6 +96,12 @@ dev = [
 [tool.ruff]
 line-length = 120
 target-version = "py312"
+
+[tool.ruff.lint.flake8-bugbear]
+# `typer.Argument(...)` and `typer.Option(...)` are immutable factories, not mutable
+# default values, so B008's concern does not apply to them. Declared once here instead of
+# a `# noqa: B008` on every parameter that typer requires inline in the signature.
+extend-immutable-calls = ["typer.Argument", "typer.Option"]
 
 [tool.pyright]
 typeCheckingMode = "basic"

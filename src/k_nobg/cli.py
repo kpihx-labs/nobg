@@ -2,8 +2,6 @@
 
 from __future__ import annotations
 
-from collections.abc import Sequence
-
 import typer
 from rich.console import Console
 
@@ -30,7 +28,7 @@ def remove(
 
 @app.command()
 def batch(
-    inputs: Sequence[str] = typer.Argument(..., help="Input image paths"),
+    inputs: list[str] = typer.Argument(..., help="Input image paths"),
     output_dir: str | None = typer.Option(None, "-o", "--output-dir", help="Output directory"),
     device: str | None = typer.Option(None, "-d", "--device", help="Force device: cpu, cuda, xpu (default: auto)"),
     verbose: bool = typer.Option(False, "-v", "--verbose", help="Show per-image progress"),
