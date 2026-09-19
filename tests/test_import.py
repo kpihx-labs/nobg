@@ -1,11 +1,16 @@
 """Basic import + smoke tests."""
 
+from importlib.metadata import version
+
 import pytest
 
 
 def test_import():
     from k_nobg import __version__
-    assert __version__ == "0.1.0"
+
+    # `__version__` must mirror the installed distribution metadata (single source of truth),
+    # never a second hardcoded copy that drifts on every release.
+    assert __version__ == version("k-nobg")
 
 
 def test_remove_module():
