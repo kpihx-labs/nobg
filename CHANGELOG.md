@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.1.3 - 2026-09-29
+
+- Dev tooling centralized: `ruff` / `pyright` removed from dev-deps (global uv tools now, Makefiles call the binaries with `--pythonpath`).
+- Lock converged with the fleet (transformers 5.17.0, numpy 2.5.3, pandas 3.0.6).
+
 ## v0.1.2 - 2026-09-29
 
 - Dropped `intel-extension-for-pytorch` from the `gpu-intel` extra (upstream archived March 2026, XPU support is native in `torch`).

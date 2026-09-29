@@ -17,10 +17,10 @@ help: ## Show help
 # ─── Quality ─────────────────────────────────────────────────────────────────
 
 check: smoke ## Lint + format + type-check + tests
-	@$(UV) run ruff check --fix $(PKG_DIR)/
-	@$(UV) run ruff format $(PKG_DIR)/
+	@ruff check --fix $(PKG_DIR)/
+	@ruff format $(PKG_DIR)/
 	@$(PYTHON) -m py_compile $(PY_FILES)
-	@$(UV) run pyright $(PKG_DIR)/
+	@pyright --pythonpath .venv/bin/python $(PKG_DIR)/
 	@$(PYTHON) -m pytest tests/ -v
 
 smoke:  ## Smoke test — import + CLI

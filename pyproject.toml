@@ -1,6 +1,6 @@
 [project]
 name        = "k-nobg"
-version     = "0.1.2"
+version     = "0.1.3"
 description = "KπX sovereign background removal — FeyNobg semantic matting (CPU / Intel Arc / NVIDIA CUDA)"
 authors     = [{ name = "KpihX", email = "kapoivha@gmail.com" }]
 readme      = "README.md"
@@ -88,8 +88,6 @@ module-name = "k_nobg"
 dev = [
     "pytest",
     "pytest-cov",
-    "ruff",
-    "pyright",
 ]
 
 [tool.ruff]
