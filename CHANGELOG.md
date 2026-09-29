@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.1.2 - 2026-09-29
+
+- Dropped `intel-extension-for-pytorch` from the `gpu-intel` extra (upstream archived March 2026, XPU support is native in `torch`).
+
 ## v0.1.1 - 2026-09-19
 
 - Repository paths migrated to the post-reorg layout (`$HOME/Labs/KpihX-Labs/AI/nobg`).
